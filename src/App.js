@@ -1,12 +1,13 @@
 import React from "react"
 import './App.css';
+import me from "./Ahlem.jpg"
 
 
 class App extends React.Component {
   constructor(props) {
     super(props)
   this.state = {
-    Person : { fullName:"ahlem brahmi", bio:"Serching for new opportunities", imgSrc:"Ahlem.jpg", profession:"it support "},
+    Person : { fullName:"ahlem brahmi", bio:"Serching for new opportunities", imgSrc:me, profession:"it support "},
     show : true,
     count: 0
   };
@@ -20,7 +21,7 @@ class App extends React.Component {
       <div>
         <h1>{this.state.Person.fullName}</h1>
         <h1>{this.state.Person.bio}</h1>
-        <div><img src={this.state.Person.imgSrc} alt={"me"}style={{width:600 , height: "600px",position:"absolute"}}></img></div>
+        <div><img src={this.state.Person.imgSrc} alt={"me"}style={{width:200 , height: "200px",position:"relative"}}></img></div>
         <h1>{this.state.Person.profession}</h1>
         <h1>Current Count : {count}</h1>
       </div>
